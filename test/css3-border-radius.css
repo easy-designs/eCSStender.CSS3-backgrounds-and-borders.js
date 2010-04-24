@@ -1,0 +1,22 @@
+/* =Basic Layout */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background: #fff;
+  color:  #000;
+  padding: 10px 0 0 10px;
+} /* comment */
+table { margin: 0 0 1em; width: 100%; }
+div.test { background: #ebebeb; padding: 1px 10px 10px; margin: 0 0 1em; }
+div.figure { border-bottom: 5px dashed #fff; margin-bottom: 1em; padding-bottom: 1em; }
+div.figure:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+#content { width: 60%; position: relative; }
+
+/* =Simple Border Radius */
+#simple-border-radius-test p.test { background: #ccc; border: 15px solid #999; color #000; padding: 10px; }
+#simple-border-radius-test p.mirror-4-ways { border-radius: 25px; }
+#simple-border-radius-test p.mirror-2-ways { border-radius: 25px 50px; }
+#simple-border-radius-test p.mirror-1-way { border-radius: 25px 50px 75px; }
+#simple-border-radius-test p.no-mirror { border-radius: 25px 50px 75px 100px; }
+
+/* =Compound Border Radius */
+#compound-border-radius-test p.test { background: #ccc; border: 15px solid #999; border-radius: 25px / 50px; color #000; padding: 10px; }

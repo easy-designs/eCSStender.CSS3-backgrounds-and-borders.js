@@ -1,0 +1,11 @@
+/*------------------------------------------------------------------------------
+Function:       eCSStender.borders-and-backgrounds.js
+Author:         Aaron Gustafson (aaron at easy-designs dot net)
+Creation Date:  2010-04-24
+Version:        0.1
+Homepage:       http://github.com/easy-designs/eCSStender.borders-and-backgrounds.js
+License:        MIT License 
+Note:           If you change or improve on this script, please let us know by
+                emailing the author (above) with a link to your demo page.
+------------------------------------------------------------------------------*/
+(function(){if(typeof eCSStender=="undefined"){return}var r=eCSStender,u,s="property",p="border-radius",m="-moz-",k="-webkit-",b="-khtml-",t="-topleft",g="border-top-left-radius",i="border-top-right-radius",l="border-bottom-right-radius",j="border-bottom-left-radius",f=" ",d=": ",n="; ",o=d+"3px";r.register({fragment:"radius",test:function(){return(!r.isSupported(s,g+o)&&(r.isSupported(s,m+p+t+o)||r.isSupported(s,k+g+o)||r.isSupported(s,b+g+o)))},fingerprint:"net.easy-designs."+p},false,function(e,x,w){var y=e+" { ",v;if(x[p]!=u){v=c(x[p]);if(v.length>1){y+=a(v)}else{y+=m+p+d+x[p]+n+k+p+d+x[p]+n+b+p+d+x[p]+n}x[p]=null}for(var z in x){if(r.isInheritedProperty(x,z)){continue}y+=q(x,z)}y+="} ";r.embedCSS(y,w)});function c(x){var y=x.split("/"),v=[];if(y.length>1){var z=r.trim(y[0]).split(f);var e=r.trim(y[1]).split(f);z=h(z);e=h(e);for(var w=0;w<4;w++){v[w]=z[w]+f+e[w]}}else{v=h(r.trim(y[0]).split(f))}return v}function h(e){if(e.length<4){if(e[1]==u){e[1]=e[0]}if(e[2]==u){e[2]=e[0]}if(e[3]==u){e[3]=e[1]}}return e}function a(e){if(r.isSupported(s,k+g+o)||r.isSupported(s,b+g+o)){a=function(v){return k+g+d+v[0]+n+k+i+d+v[1]+n+k+l+d+v[2]+n+k+j+d+v[3]+n+b+g+d+v[0]+n+b+i+d+v[1]+n+b+l+d+v[2]+n+b+j+d+v[3]+n}}else{a=function(v){return m+p+t+d+v[0]+n+m+p+"-topright: "+v[1]+n+m+p+"-bottomright: "+v[2]+n+m+p+"-bottomleft: "+v[3]+n}}return a(e)}function q(e,v){if(r.isSupported(s,m+p+t+o)){q=function(w,x){return x.replace(/border-(top|bottom)-(left|right)-radius/,m+p+"-$1$2")+d+w[x]+n}}else{q=function(w,x){return x+d+w[x]+n}}return q(e,v)}})();
