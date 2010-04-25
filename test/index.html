@@ -10,7 +10,7 @@
     <meta name="Copyright" content="Copyright (c) 2008. All rights reserved." />
     <meta http-equiv="imagetoolbar" content="no" />
     <meta name="Rating" content="General" />
-    <link rel="stylesheet" type="text/css" media="screen" href="css3-border-radius.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="test.css" />
     <script type="text/javascript" src="../vendors/eCSStender.js/src/eCSStender.js"></script>
     <script type="text/javascript" src="../src/eCSStender.css3-backgrounds-and-borders.js"></script>
   </head>
@@ -32,22 +32,22 @@ p.mirror-1-way { border-radius: 25px 50px 75px; }
 p.no-mirror { border-radius: 25px 50px 75px 100px; }</code></pre>
         <p class="test mirror-4-ways"><strong>If your browser supports it, this paragraph should have rounded corners of equal size (25px).</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
         <div class="figure">
-          <p class="legend">A reference rendering demonstrating border-radius with 4-way mirroring.</p>
+          <p class="legend">A reference rendering demonstrating <code>border-radius</code> with 4-way mirroring.</p>
           <img src="img/mirror-4-ways.png" alt="" />
         </div>
         <p class="test mirror-2-ways"><strong>If your browser supports it, this paragraph should have rounded corners, with the top right and bottom left corners being 25px in diameter and the bottom right and top left being 50px in diameter.</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
         <div class="figure">
-          <p class="legend">A reference rendering demonstrating border-radius with 2-way mirroring.</p>
+          <p class="legend">A reference rendering demonstrating <code>border-radius</code> with 2-way mirroring.</p>
           <img src="img/mirror-2-ways.png" alt="" />
         </div>
         <p class="test mirror-1-way"><strong>If your browser supports it, this paragraph should have rounded corners, with the top right corner being 25px in diameter, the bottom right and top left being 50px in diameter, and the bottom left being 75px in diameter.</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
         <div class="figure">
-          <p class="legend">A reference rendering demonstrating border-radius with 1-way mirroring.</p>
+          <p class="legend">A reference rendering demonstrating <code>border-radius</code> with 1-way mirroring.</p>
           <img src="img/mirror-1-way.png" alt="" />
         </div>
         <p class="test no-mirror"><strong>If your browser supports it, this paragraph should have rounded corners, with the top right corner being 25px in diameter, the bottom right being 50px in diameter, the bottom left being 75px in diameter, and the top left being 100px in diameter.</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
         <div class="figure">
-          <p class="legend">A reference rendering demonstrating border-radius with no wirroring.</p>
+          <p class="legend">A reference rendering demonstrating <code>border-radius</code> with no wirroring.</p>
           <img src="img/no-mirror.png" alt="" />
         </div>
       </div>
@@ -63,8 +63,40 @@ p.no-mirror { border-radius: 25px 50px 75px 100px; }</code></pre>
   }</code></pre>
         <p class="test"><strong>If your browser supports it, this paragraph should have irregularly rounded corners of equal size, with the first radius being 25px and the second being 50px in diameter.</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
         <div class="figure">
-          <p class="legend">A reference rendering demonstrating border-radius with compound radii.</p>
+          <p class="legend">A reference rendering demonstrating <code>border-radius</code> with compound radii.</p>
           <img src="img/compound-border-radius-test.png" alt="" />
+        </div>
+      </div>
+      
+      <div class="test" id="box-shadow-test">
+        <h2>Simple <code>box-shadow</code></h2>
+        <pre class="css"><code>p.test {
+  background: #fff;
+  box-shadow: 5px 5px 15px 1px #000;
+  margin: 2em auto;
+  padding: 10px;
+  width: 90%;
+  }</code></pre>
+        <p class="test">If your browser supports it, this paragraph should have a drop shadow cast toward it&#8217;s lower left, 5px out in each direction. It should be blurred 15px and spread 1px <em>(if supported)</em>.</p>
+        <div class="figure">
+          <p class="legend">A reference rendering demonstrating a simple <code>box-shadow</code>.</p>
+          <img src="img/box-shadow-test.png" alt="" />
+        </div>
+      </div>
+      
+      <div class="test" id="compound-box-shadow-test">
+        <h2>Compound <code>box-shadow</code></h2>
+        <pre class="css"><code>p.test {
+  background: #fff;
+  box-shadow: 5px 5px 15px 1px #000, -5px -5px 15px 1px #000;
+  margin: 2em auto;
+  padding: 10px;
+  width: 90%;
+  }</code></pre>
+        <p class="test">If your browser supports it, this paragraph should have two drop shadows cast: 1) a drop shadow cast toward it&#8217;s lower left, 5px out in each direction, blurred 15px, and spread 1px <em>(if supported)</em>); and 2) a drop shadow cast toward it&#8217;s lower left, -5px out in each direction, blurred 15px, and spread 1px <em>(if supported)</em>.</p>
+        <div class="figure">
+          <p class="legend">A reference rendering demonstrating a compound <code>box-shadow</code>.</p>
+          <img src="img/compound-box-shadow-test.png" alt="" />
         </div>
       </div>
       

@@ -9,6 +9,7 @@ table { margin: 0 0 1em; width: 100%; }
 div.test { background: #ebebeb; padding: 1px 10px 10px; margin: 0 0 1em; }
 div.figure { border-bottom: 5px dashed #fff; margin-bottom: 1em; padding-bottom: 1em; }
 div.figure:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
+div.figure img { max-width: 90%;}
 #content { width: 60%; position: relative; }
 
 /* =Simple Border Radius */
@@ -20,3 +21,7 @@ div.figure:last-child { border-bottom: 0; margin-bottom: 0; padding-bottom: 0; }
 
 /* =Compound Border Radius */
 #compound-border-radius-test p.test { background: #ccc; border: 15px solid #999; border-radius: 25px / 50px; color #000; padding: 10px; }
+
+/* =Box Shadow */
+#box-shadow-test p.test { background: #fff; box-shadow: 5px 5px 15px 1px #000; margin: 2em auto; padding: 10px; width: 90%; }
+#compound-box-shadow-test p.test { background: #fff; box-shadow: 5px 5px 15px 1px #000, -5px -5px 15px 1px #000; margin: 2em auto; padding: 10px; width: 90%; }
