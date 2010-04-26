@@ -1,5 +1,5 @@
 /*------------------------------------------------------------------------------
-Function:       eCSStender.borders-and-backgrounds.js
+Function:       eCSStender.CSS3-backgrounds-and-borders.js
 Author:         Aaron Gustafson (aaron at easy-designs dot net)
 Creation Date:  2010-04-24
 Version:        0.2
