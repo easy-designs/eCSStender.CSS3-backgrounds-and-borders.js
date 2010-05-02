@@ -2,7 +2,7 @@
 Function:       eCSStender.CSS3-backgrounds-and-borders.js
 Author:         Aaron Gustafson (aaron at easy-designs dot net)
 Creation Date:  2010-04-24
-Version:        0.2
+Version:        0.3
 Homepage:       http://github.com/easy-designs/eCSStender.borders-and-backgrounds.js
 License:        MIT License 
 Note:           If you change or improve on this script, please let us know by
@@ -202,7 +202,7 @@ Note:           If you change or improve on this script, please let us know by
     spread_support = false;
     
     e.register(
-      { property: 'box-shadow',
+      { property: BS,
         test:     function()
         {
           return ( ! e.isSupported( PROPERTY, BS + TEST ) &&
@@ -219,12 +219,36 @@ Note:           If you change or improve on this script, please let us know by
     
     function apply( selector, properties, medium )
     {
-      var style_block = selector + ' { ';
+      var
+      style_block = selector + ' { ',
+      shadow      = properties[BS],
+      colors      = shadow.match( /((?:rgb|hsl)a?\([^\)]+\))/g ),
+      i           = colors.length,
+      color       = '%MASKED_COLOR',
+      percent     = '%';
 
-      style_block += convert( properties['box-shadow'] );
+      // mask RGB/HSL colors
+      if ( i )
+      {
+        while ( i-- )
+        {
+          shadow = shadow.replace( colors[i], color+i+percent );
+        }
+      }
+
+      style_block += convert( shadow );
+
+      // unmask RGB/HSL colors
+      i = colors.length;
+      if ( i )
+      {
+        while ( i-- )
+        {
+          style_block = style_block.replace( color+i+percent, colors[i] );
+        }
+      }
 
       style_block += '} ';
-
       e.embedCSS( style_block, medium );
     }
     
