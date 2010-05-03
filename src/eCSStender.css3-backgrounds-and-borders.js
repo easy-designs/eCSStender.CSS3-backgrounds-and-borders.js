@@ -2,7 +2,7 @@
 Function:       eCSStender.CSS3-backgrounds-and-borders.js
 Author:         Aaron Gustafson (aaron at easy-designs dot net)
 Creation Date:  2010-04-24
-Version:        0.3
+Version:        0.3.1
 Homepage:       http://github.com/easy-designs/eCSStender.borders-and-backgrounds.js
 License:        MIT License 
 Note:           If you change or improve on this script, please let us know by
@@ -223,7 +223,7 @@ Note:           If you change or improve on this script, please let us know by
       style_block = selector + ' { ',
       shadow      = properties[BS],
       colors      = shadow.match( /((?:rgb|hsl)a?\([^\)]+\))/g ),
-      i           = colors.length,
+      i = count   = ( colors instanceof Array ? colors.length : 0 ),
       color       = '%MASKED_COLOR',
       percent     = '%';
 
@@ -239,7 +239,7 @@ Note:           If you change or improve on this script, please let us know by
       style_block += convert( shadow );
 
       // unmask RGB/HSL colors
-      i = colors.length;
+      i = count;
       if ( i )
       {
         while ( i-- )
