@@ -3,7 +3,7 @@ Function:       eCSStender.CSS3-backgrounds-and-borders.js
 Author:         Aaron Gustafson (aaron at easy-designs dot net)
 Creation Date:  2010-04-24
 Version:        0.3.1
-Homepage:       http://github.com/easy-designs/eCSStender.borders-and-backgrounds.js
+Homepage:       http://github.com/easy-designs/eCSStender.CSS3-backgrounds-and-borders.js
 License:        MIT License 
 Note:           If you change or improve on this script, please let us know by
                 emailing the author (above) with a link to your demo page.
