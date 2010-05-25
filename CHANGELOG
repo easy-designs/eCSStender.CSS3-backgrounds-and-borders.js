@@ -1,3 +1,7 @@
+*v0.3.2* (2010-05-25)
+
+* Minor tweak to the undefined clause and a fix to a double webkit test
+
 *v0.3.1* (2010-05-03)
 
 * Bug fix for IE (match() won't always return an array)
