@@ -10,7 +10,7 @@ Note:           If you change or improve on this script, please let us know by
 ------------------------------------------------------------------------------*/
 (function(){
   
-  if ( typeof eCSStender == 'undefined' ){ return; }
+  if ( eCSStender === undefined ){ return; }
   
   var
   e = eCSStender,
@@ -299,7 +299,7 @@ Note:           If you change or improve on this script, please let us know by
       {
         // test spread support as Webkit doesn't currently have it
         if ( e.isSupported( PROPERTY, WEBKIT + BS + TEST ) ||
-             e.isSupported( PROPERTY, WEBKIT + BS + TEST ) )
+             e.isSupported( PROPERTY, KHTML + BS + TEST ) )
         {
           spread_support = true;
         }
