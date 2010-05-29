@@ -2,7 +2,7 @@
 Function:       eCSStender.CSS3-backgrounds-and-borders.js
 Author:         Aaron Gustafson (aaron at easy-designs dot net)
 Creation Date:  2010-04-24
-Version:        0.3.2
+Version:        0.3.3
 Homepage:       http://github.com/easy-designs/eCSStender.CSS3-backgrounds-and-borders.js
 License:        MIT License 
 Note:           If you change or improve on this script, please let us know by
@@ -237,14 +237,14 @@ Note:           If you change or improve on this script, please let us know by
       }
 
       style_block += convert( shadow );
-
+      
       // unmask RGB/HSL colors
       i = count;
       if ( i )
       {
         while ( i-- )
         {
-          style_block = style_block.replace( color+i+percent, colors[i] );
+          style_block = style_block.replace( new RegExp( color+i+percent, 'g'), colors[i] );
         }
       }
 
