@@ -2,7 +2,7 @@
 Function:       eCSStender.CSS3-backgrounds-and-borders.js
 Author:         Aaron Gustafson (aaron at easy-designs dot net)
 Creation Date:  2010-04-24
-Version:        0.3.3
+Version:        0.3.4
 Homepage:       http://github.com/easy-designs/eCSStender.CSS3-backgrounds-and-borders.js
 License:        MIT License 
 Note:           If you change or improve on this script, please let us know by
@@ -193,6 +193,7 @@ Note:           If you change or improve on this script, please let us know by
     FILTER   = 'filter: ',
     SHADOW   = 'progid:DXImageTransform.Microsoft.Shadow',
     TWOPX    = '2px',
+    BLACK    = 'black',
     COLOR    = 'rgb(0, 0, 0)',
     WKTEST   = COLON + COLOR + SPACE + TWOPX + SPACE + TWOPX + SPACE + TWOPX,
     TEST     = WKTEST + SPACE + TWOPX,
@@ -200,7 +201,7 @@ Note:           If you change or improve on this script, please let us know by
     
     // test
     spread_support = false;
-    
+    console.log(WEBKIT + BS + S5TEST );
     e.register(
       { property: BS,
         test:     function()
@@ -208,7 +209,9 @@ Note:           If you change or improve on this script, please let us know by
           return ( ! e.isSupported( PROPERTY, BS + TEST ) &&
                    ( e.isSupported( PROPERTY, MOZ + BS + TEST ) ||
                      e.isSupported( PROPERTY, WEBKIT + BS + WKTEST ) ||
+                     e.isSupported( PROPERTY, WEBKIT + BS + TEST ) ||
                      e.isSupported( PROPERTY, KHTML + BS + WKTEST ) ||
+                     e.isSupported( PROPERTY, KHTML + BS + TEST ) ||
                      e.isSupported( PROPERTY, FILTER + IETEST ) ) );
         },
         fingerprint: 'net.easy-designs.' + BS
@@ -297,7 +300,7 @@ Note:           If you change or improve on this script, please let us know by
       }
       else
       {
-        // test spread support as Webkit doesn't currently have it
+        // test spread support as Webkit previous to Safari 5 doesn't have it
         if ( e.isSupported( PROPERTY, WEBKIT + BS + TEST ) ||
              e.isSupported( PROPERTY, KHTML + BS + TEST ) )
         {

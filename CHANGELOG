@@ -1,3 +1,7 @@
+*v0.3.4* (2010-06-16)
+
+* Fixes for initial Webkit tests to include spread support (introduced in Safari 5)
+
 *v0.3.3* (2010-05-29)
 
 * Minor tweak to the way masked colors are replaced in RGBa-based drop shadows
