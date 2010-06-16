@@ -201,7 +201,6 @@ Note:           If you change or improve on this script, please let us know by
     
     // test
     spread_support = false;
-    console.log(WEBKIT + BS + S5TEST );
     e.register(
       { property: BS,
         test:     function()
