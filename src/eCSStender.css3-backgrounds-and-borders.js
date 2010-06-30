@@ -15,10 +15,49 @@ Note:           If you change or improve on this script, please let us know by
   var
   e = eCSStender,
   // Extensions
+  Background = new Background( e ),
   BRObject = new BorderRadius( e ),
   BSObject = new BoxShadow( e );
 
   // Objects
+  function Background( e )
+  {
+    var
+    PROPERTY  = 'property',
+    MOZ       = '-moz-',
+    WEBKIT    = '-webkit-',
+    KHTML     = '-khtml-',
+    SPACE     = ' ',
+    COLON     = ': ',
+    SEMICOL   = '; ',
+    BG        = 'background',
+    BG_COLOR  = BG + '-color',
+    BG_IMG    = BG + '-image',
+    BG_RPT    = BG + '-repeat',
+    BG_ATTACH = BG + '-attachment',
+    BG_POSN   = BG + '-position',
+    BG_CLIP   = BG + '-clip',
+    BG_ORIGIN = BG + '-origin',
+    BG_SIZE   = BG + '-size',
+    // regex got background-image property
+    RE_IMG    = /^((none|url\([^)]+\)),?\s?)*(none|url\([^)]+\))$/,
+    // regex for background-repeat property
+    RE_RPT    = /^((((no-)?repeat|space|round|no-repeat)\s?){1,2})|repeat-[xy]$/,
+    // regex for background-attachment
+    RE_ATTACH = /^scroll|fixed|local$/,
+    // regex for background-position
+    // ^(((top|bottom|left|right)(\s-?\d+(%|\w+))?|center|-?\d+(%|\w+))(\s\2)?)(,\s?\1)*$
+    RE_POSN   = /^(((top|bottom|left|right)(\s-?\d+(%|\w+))?|center|-?\d+(%|\w+))(\s)?(,\s?\2)?)+$/,
+    // regex for background-clip
+    RE_CLIP   = ,
+    // regex for background-origin
+    BG_ORIGIN = ,
+    // regex for background-size
+    BG_SIZE   = ;
+    
+  }
+  
+  
   function BorderRadius( e )
   { 
     var
