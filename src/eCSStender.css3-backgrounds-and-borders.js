@@ -2,7 +2,7 @@
 Function:       eCSStender.CSS3-backgrounds-and-borders.js
 Author:         Aaron Gustafson (aaron at easy-designs dot net)
 Creation Date:  2010-04-24
-Version:        0.3.4
+Version:        0.3.5
 Homepage:       http://github.com/easy-designs/eCSStender.CSS3-backgrounds-and-borders.js
 License:        MIT License 
 Note:           If you change or improve on this script, please let us know by
@@ -290,6 +290,7 @@ Note:           If you change or improve on this script, please let us know by
       }
 
       style_block += '} ';
+      
       e.embedCSS( style_block, medium );
     }
     
@@ -300,14 +301,15 @@ Note:           If you change or improve on this script, please let us know by
         convert = function( shadow )
         {
           var
-          shadows = shadow.split(','),
-          rule    = 'zoom: 1; ' + FILTER,
-          i       = shadows.length,
+          shadows    = shadow.split(','),
+          rule       = 'zoom: 1; ' + FILTER,
+          i          = shadows.length,
+          abbr_color = /(#)([a-fA-F0-9])([a-fA-F0-9])([a-fA-F0-9])/,
           pieces, direction, blur, spread, color;
           
           while ( i-- )
           {
-            shadow = e.trim( shadows[i] ).split(SPACE);
+            shadow = e.trim( shadows[i] ).split( SPACE );
             pieces = shadow.length;
             direction = findAngle( shadow[0], shadow[1] );
             blur = spread = null;
@@ -327,6 +329,12 @@ Note:           If you change or improve on this script, please let us know by
               case 3:
                 color  = e.trim( shadow[2] );
                 break;
+            }
+            
+            // expand colors
+            if ( color.match( abbr_color ) )
+            {
+              color = color.replace( abbr_color, '$1$2$2$3$3$4$4' );
             }
             
             rule += SHADOW + '(color=' + color + ',direction=' + direction + ',strength=' + blur + ') ';
@@ -397,7 +405,7 @@ Note:           If you change or improve on this script, please let us know by
     
     function findAngle ( x, y )
     {
-      return 270 - ( Math.atan2( y, 0-x ) * 180 / Math.PI );
+      return 270 - ( Math.atan2( parseInt( y, 10 ), 0 - parseInt( x, 10 ) ) * 180 / Math.PI );
     }
     
   }
